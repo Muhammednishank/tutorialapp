@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home.dart';
 
 main() {
-  runApp(MyApp());
+  runApp(mainapp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class mainapp extends StatelessWidget {
+  const mainapp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +14,14 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.indigo,
         ),
-      home: HomeScreen(),
+      home:Mainscreen(),
     );
   }
 }
 
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Mainscreen extends StatelessWidget {
+  const Mainscreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

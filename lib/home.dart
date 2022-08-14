@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 main() {
   runApp(MyApp());
@@ -51,7 +52,12 @@ class HomeScreen extends StatelessWidget {
                    children: [
                   TextButton(onPressed: (){
                    }, child: Text('click me'),),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.mic))
+                  IconButton(onPressed: (){
+                    onPressed: () {
+  Home: Mainscreen();
+
+};
+                  }, icon: Icon(Icons.mic))
                   ],),   
                    ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
                    ]),
