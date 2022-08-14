@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white70,
       appBar:AppBar(
       backgroundColor: Color.fromARGB(255, 18, 63, 99),
-      title: Text('           TUTORIAL APP',
+      title: Text('           TURORPOINT',
       textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: 30
