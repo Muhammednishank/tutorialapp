@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:flutter_application_1/main.dart';
 
 main() {
   runApp(MyApp());
@@ -20,9 +20,14 @@ class MyApp extends StatelessWidget {
 }
 
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,12 +59,16 @@ class HomeScreen extends StatelessWidget {
                    }, child: Text('click me'),),
                   IconButton(onPressed: (){
                     onPressed: () {
-  Home: Mainscreen();
+ 
 
 };
                   }, icon: Icon(Icons.mic))
                   ],),   
-                   ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
+                   ElevatedButton(onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
+                      return Mainscreen();
+                    }));
+                   }, child: Text('CLICK HERE TO CONTINUE'))
                    ]),
                    ),
              ),

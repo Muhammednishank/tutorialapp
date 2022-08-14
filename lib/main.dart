@@ -1,28 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home.dart';
-
-main() {
-  runApp(mainapp());
-}
-
-class mainapp extends StatelessWidget {
-  const mainapp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(
-          primaryColor: Colors.indigo,
-        ),
-      home:Mainscreen(),
-    );
-  }
-}
-
-
-class Mainscreen extends StatelessWidget {
+import 'package:flutter_application_1/physics.dart';
+class Mainscreen extends StatefulWidget {
   const Mainscreen({Key? key}) : super(key: key);
 
+  @override
+  State<Mainscreen> createState() => _MainscreenState();
+}
+
+class _MainscreenState extends State<Mainscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +67,11 @@ class Mainscreen extends StatelessWidget {
       }, child: Text('click me'),),
      IconButton(onPressed: (){}, icon: Icon(Icons.mic))
      ],),   
-      ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
+      ElevatedButton(onPressed:(){
+        Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
+          return physics();
+        }));
+      }, child: Text('CLICK HERE TO CONTINUE'))
       ]),
       ),
        Container(
