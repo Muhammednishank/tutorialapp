@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             
              Expanded(
                child: Container(
-                      
+                width: 500,
                      child: Column(
                       mainAxisAlignment: MainAxisAlignment.center, 
                        children: [  
@@ -51,24 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
                    fontSize: 50,
                    fontWeight: FontWeight.bold,
                    ),
-                   ),
-                  Row(
-                   mainAxisAlignment: MainAxisAlignment.center,
-                   children: [
-                  TextButton(onPressed: (){
-                   }, child: Text('click me'),),
-                  IconButton(onPressed: (){
-                    onPressed: () {
- 
-
-};
-                  }, icon: Icon(Icons.mic))
-                  ],),   
+                   ),  
                    ElevatedButton(onPressed:(){
                     Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
                       return Mainscreen();
                     }));
-                   }, child: Text('CLICK HERE TO CONTINUE'))
+                   }, child: Text('CLICK HERE FOR NOTES'))
                    ]),
                    ),
              ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/biology.dart';
+import 'package:flutter_application_1/chemistry.dart';
+import 'package:flutter_application_1/mathematics.dart';
 import 'package:flutter_application_1/physics.dart';
 class Mainscreen extends StatefulWidget {
   const Mainscreen({Key? key}) : super(key: key);
@@ -14,7 +17,7 @@ class _MainscreenState extends State<Mainscreen> {
       backgroundColor: Colors.white70,
       appBar:AppBar(
       backgroundColor: Color.fromARGB(255, 18, 63, 99),
-      title: Text('           TURORPOINT',
+      title: Text('    TUTORPOINT',
       textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: 30
@@ -25,13 +28,9 @@ class _MainscreenState extends State<Mainscreen> {
        body: SafeArea(
         child: Column(
           children: [
-            Expanded (
+            Container (
               child: Container(
-                decoration: BoxDecoration(
-                color: Color.fromARGB(255, 255, 255, 255),
-                border: Border.all(
-                color: Colors.green,
-                )),
+
               child: Row(
                 children: [
                   Text('          This application is for students ' ,
@@ -46,8 +45,11 @@ class _MainscreenState extends State<Mainscreen> {
               ) ,
               ),
             ),
+                  Divider(
+        thickness: 5,
+      ),
 
-             Container(
+             Expanded(
          
         child: Column(
          mainAxisAlignment: MainAxisAlignment.center, 
@@ -60,26 +62,19 @@ class _MainscreenState extends State<Mainscreen> {
       fontWeight: FontWeight.bold,
       ),
       ),
-     Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-     TextButton(onPressed: (){
-      }, child: Text('click me'),),
-     IconButton(onPressed: (){}, icon: Icon(Icons.mic))
-     ],),   
+      
       ElevatedButton(onPressed:(){
         Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
           return physics();
         }));
-      }, child: Text('CLICK HERE TO CONTINUE'))
+      }, child: Text('NOTES'))
       ]),
       ),
-       Container(
-        decoration: BoxDecoration(
-	  color: Color.fromARGB(255, 255, 255, 255),
-	  border: Border.all(
-		color: Colors.green,
-	  )),
+            Divider(
+        thickness: 5,
+      ),
+       Expanded(
+
         
         child: Column(
          mainAxisAlignment: MainAxisAlignment.center, 
@@ -92,18 +87,18 @@ class _MainscreenState extends State<Mainscreen> {
       fontWeight: FontWeight.bold,
       ),
       ),
-     Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-     TextButton(onPressed: (){
-      }, child: Text('click me'),),
-     IconButton(onPressed: (){}, icon: Icon(Icons.mic))
-     ],),   
-      ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
+   
+      ElevatedButton(onPressed:(){
+        Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
+          return chemistry();
+        }));
+      }, child: Text('NOTES'))
       ]),
       ),
-      
-       Container(
+           Divider(
+        thickness: 5,
+      ), 
+  Expanded(
          
         child: Column(
          mainAxisAlignment: MainAxisAlignment.center, 
@@ -116,26 +111,21 @@ class _MainscreenState extends State<Mainscreen> {
       fontWeight: FontWeight.bold,
       ),
       ),
-     Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-     TextButton(onPressed: (){
-      }, child: Text('click me'),),
-     IconButton(onPressed: (){}, icon: Icon(Icons.mic))
-     ],),   
-      ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
+   
+      ElevatedButton(onPressed:(){
+        Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
+          return biology();
+        }));
+      }, child: Text('NOTES'))
       ]),
       ),
-        Container(
-        decoration: BoxDecoration(
-	  color: Color.fromARGB(255, 255, 255, 255),
-	  border: Border.all(
-		color: Colors.green,
-	  )),
-        
-        child: Column(
+      Divider(
+        thickness: 5,
+      ),
+        Expanded(
+         child: Column(
          mainAxisAlignment: MainAxisAlignment.center, 
-          children: [  
+         children: [  
       Text('MATHEMATICS' ,
       textAlign: TextAlign.center, 
       style: const TextStyle(
@@ -144,14 +134,12 @@ class _MainscreenState extends State<Mainscreen> {
       fontWeight: FontWeight.bold,
       ),
       ),
-     Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-     TextButton(onPressed: (){
-      }, child: Text('click me'),),
-     IconButton(onPressed: (){}, icon: Icon(Icons.mic))
-     ],),   
-      ElevatedButton(onPressed:(){}, child: Text('CLICK HERE TO CONTINUE'))
+   
+      ElevatedButton(onPressed:(){
+        Navigator.of(context).push(MaterialPageRoute(builder: (cxt){
+          return maths();
+        }));
+      }, child: Text('NOTES'))
       ]),
       ),  
          

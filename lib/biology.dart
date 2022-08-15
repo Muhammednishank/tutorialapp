@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 final index=10;
-class physics extends StatefulWidget {
-  const physics({Key? key}) : super(key: key);
+class biology extends StatefulWidget {
+  const biology({Key? key}) : super(key: key);
 
   @override
-  State<physics> createState() => _physicsState();
+  State<biology> createState() => _biologyState();
 }
 
-class _physicsState extends State<physics> {
+class _biologyState extends State<biology> {
   @override
   Widget build(BuildContext context) {
   return Scaffold(
